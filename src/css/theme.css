@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "roboto-thin";
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: "roboto-medium";
+  src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+:root {
+  --primary-color: #240d36;
+  --secondary-color: #292a2d;
+  --font-default: "roboto-thin";
+}
