@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Server</title>
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./fa/css/all.min.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <nav>
+        <span>Beauty Server</span>
+      </nav>
+      <nav>
+        <button>
+          Arquivos
+          <ul class="submenu">
+            <li onclick="local()">Arquivos locais</li>
+            <li onclick="minimize()">Minimizar</li>
+            <li onclick="quit()">Fechar</li>
+          </ul>
+        </button>
+        <button>
+          Preferências
+          <ul class="submenu short">
+            <li>
+              <input type="checkbox" checked="false" />
+              Iniciar com o Windows
+            </li>
+          </ul>
+        </button>
+        <button>
+          Ajuda
+          <ul class="submenu">
+            <li onclick="githubProject()">Visitar projeto no Github</li>
+            <li onclick="help()">Como começar?</li>
+            <li onclick="donate()">Donation</li>
+          </ul>
+        </button>
+      </nav>
+      <main>
+        <div class="statusbar">
+          <span class="title">Status de serviços:</span>
+          <span>
+            Apache
+            <div class="apache_status"></div>
+          </span>
+          <span>
+            MariaDB
+            <div class="mariadb_status"></div>
+          </span>
+        </div>
+        <div class="content">
+          <div class="services-container">
+            <h3>Serviços</h3>
+            <br /><br />
+            <div>
+              <span>Apache</span>
+              <div>
+                <button onclick="startApache()" id="apache_btn_service">
+                  Iniciar
+                </button>
+                <button onclick="openHTTPD_CONF()">httpd.conf</button>
+              </div>
+            </div>
+            <div>
+              <span>MariaDB</span>
+              <div>
+                <button onclick="startMariaDB()" id="mariadb_btn_service">
+                  Iniciar
+                </button>
+                <button onclick="openMARIADB()">Abrir pasta</button>
+              </div>
+            </div>
+            <h3>PHP</h3>
+            <div>
+              <span>Versão PHP 8.0.9</span>
+              <div>
+                <button onclick="openPHP_INI()">php.ini</button>
+              </div>
+            </div>
+          </div>
+          <div class="htdocs-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/listdir.js"></script>
+    <script src="./js/openFile.js"></script>
+    <script src="./js/listener.js"></script>
+    <script src="./js/services.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+      document.querySelector(".htdocs-container").innerHTML = list_htdocs();
+      setInterval(() => {
+        document.querySelector(".htdocs-container").innerHTML = list_htdocs();
+      }, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body,
+.modal {
+  /* -webkit-user-select: none; */
+  /* -webkit-app-region: drag; */
+}
+.modal {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  color: white;
+  font-family: roboto-thin;
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 30px 10px;
+}
+.project-line h6 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.btn-modal {
+  background-color: blueviolet;
+  border: 0;
+  color: white;
+  outline: 0;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.project-line input {
+  width: 100%;
+  border: solid 2px #333;
+  outline: 0;
+  border-radius: 10px;
+  height: 20px;
+  text-indent: 10px;
+}
+
+.project-license select {
+  width: 100%;
+  border: solid 2px #333;
+  outline: 0;
+  border-radius: 10px;
+  height: 30px;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  border: solid 2px #333;
+  outline: 0;
+  border-radius: 10px;
+  height: 60px;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+.btn-cancel {
+  background-color: rgb(226, 43, 43);
+  border: 0;
+  color: white;
+  outline: 0;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
