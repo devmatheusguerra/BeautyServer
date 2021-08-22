@@ -41,8 +41,7 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "BeautyServer",
-            "iconURL": "./src/assets/icon.ico",
-            "loadingGIF": "./src/assets/load.gif"
+            "iconURL": "https://raw.githubusercontent.com/devmatheusguerra/BeautyServer/main/src/assets/icon.ico"
           }
         },
         {
